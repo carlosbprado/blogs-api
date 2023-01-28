@@ -5,6 +5,7 @@ const PostCategorieSchema = (sequelize, DataTypes) => {
  }, {
   tableName: 'PostCategories',
   underscored: true,
+  timestamps: false,
  })
  
   return PostCategorie;

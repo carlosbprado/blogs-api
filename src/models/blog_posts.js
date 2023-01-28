@@ -8,6 +8,7 @@ const PostSchema = (sequelize, DataTypes) => {
  }, {
   tableName: 'blog_posts',
   underscored: true,
+  timestamps: false,
  })
   return PostTable;
 };

@@ -5,6 +5,7 @@ const CategorieSchema = (sequelize, DataTypes) => {
   }, {
     tableName: 'categories',
     underscored: true,
+    timestamps: false,
   })
   return CategorieTable;
 };
