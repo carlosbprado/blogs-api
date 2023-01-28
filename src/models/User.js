@@ -1,5 +1,5 @@
 const UserSchema = (sequelize, DataTypes) => {
- const UserTable = sequelize.define('User', {
+ const User = sequelize.define('User', {
   id: { type:DataTypes.INTEGER, primaryKey: true },
   displayName: DataTypes.STRING,
   email: DataTypes.STRING,
@@ -10,7 +10,13 @@ const UserSchema = (sequelize, DataTypes) => {
   underscored: true,
   timestamps: false,
  })
-  return UserTable;
+
+ User.associate = (models) => {
+  User.hasMany(models.BlogPost, {
+    foreignKey: 'user_id'
+  });
+ }
+  return User;
 };
 
 module.exports = UserSchema;
