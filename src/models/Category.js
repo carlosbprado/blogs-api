@@ -3,7 +3,7 @@ const CategorySchema = (sequelize, DataTypes) => {
     "Category",
     {
       name: DataTypes.STRING,
-      id: { type: DataTypes.INTEGER, primaryKey: true, allowNull: false },
+      id: { type: DataTypes.INTEGER, primaryKey: true },
     },
     {
       tableName: "categories",
